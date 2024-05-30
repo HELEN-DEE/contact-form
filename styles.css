@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Green-lighter: hsl(148, 38%, 91%);
+    --Green-medium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+
+/* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Grey-medium: hsl(186, 15%, 59%);
+    --Grey-darker: hsl(187, 24%, 22%);
+}
+
+body {
+    background-color: var(--Green-lighter);
+    font-family: "Karla", sans-serif;
+}
+
+main {
+    background-color: var(--White);
+    width: 50%;
+    margin: 5% auto;
+    padding: 0.5rem 3%;
+    border-radius: 10px;
+    color: var(--Grey-darker);
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-weight: 700;
+}
+
+form {
+    font-size: 12px;
+    font-weight: 400px;
+}
+
+.form-items {
+    margin: 1rem 0;
+}
+
+.form-items span {
+    color: var(--Green-medium);
+    margin-left: 10px;
+}
+
+
+.name {
+    gap: 1rem;
+}
+
+
+.email-address {
+    display: block;
+}
+
+/* query type */
+.radio-input {
+    gap: 1rem;
+}
+
+/* input [type = 'radio'] {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -5px;
+    left: -1px;
+    position: relative;
+    background-color: var(--Grey-medium);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid var(--Green-medium);
+} */
+
+input[type='radio']:checked:after {
+    width: 11px;
+    height: 11px;
+    border-radius: 15px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: var(--Green-medium);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid var(--Green-medium);
+}
+
+.radio-option {
+    gap: 0.5rem;
+}
+
+.radio-option:hover {
+    background-color: var(--Green-lighter);
+}
+.radio-option {
+    color: var(--Green-medium);
+}
+
+/* message */
+.message {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message textarea {
+    border: 1px solid var(--Grey-medium);
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-bottom: 1rem;
+}
+
+/* consent */
+.consent {
+    gap: 1rem;
+}
+.consent label {
+    align-items: center;
+}
+
+/* submit button */
+button {
+    width: 100%;
+    background-color: var(--Green-medium);
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 6px;
+    color: var(--White);
+    margin-top: 0.5rem;
+}
+
+
+/* general styling */
+.input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--Grey-medium);
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}
+
+
+.flex {
+    display: flex;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
