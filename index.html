@@ -14,54 +14,63 @@
 <main>
   <h1>Contact us</h1>
 
-  <form action="#">
+<form id="contact-form" action="#">
     <div class="form-items flex name">
       <div class="firstname">
         <label for="firstname">First name <span>*</span></label>
         <input class="input" type="text" name="firstname" id="firstname">
+        <span class="error-message" id="firstname-error"></span>
       </div>
 
       <div class="lastname">
         <label for="lastname">Last name <span>*</span></label>
         <input class="input" type="text" name="lastname" id="lastname">
+        <span class="error-message" id="lastname-error"></span>
       </div>
     </div>
 
-    <div class="form-items ">
+    <div class="form-items">
       <div class="email-address">
         <label for="email">Email Address <span>*</span></label>
         <input class="input" type="text" name="email" id="email">
+        <span class="error-message" id="email-error"></span>
       </div>
+    </div>
 
-      <div class="form-items ">
-        <div class="query-type">
-          <label for="query-type">Query type<span>*</span></label>
+    <div class="form-items">
+      <div class="query-type">
+        <label>Query type<span>*</span></label>
 
-          <div class="radio-input flex">
-            <div class="radio-option input flex">
-              <input type="radio" name="general-enquiry" id="general-enquiry" value="general-enquiry">
-              <label for="general-enquiry">General enquiry</label>
-            </div>
-
-            <div class="radio-option input flex">
-              <input type="radio" name="support-request" id="support-request" value="support-request">
-              <label for="support-request">Support request</label>
-            </div>
+        <div class="radio-input flex">
+          <div class="radio-option input flex">
+            <input type="radio" name="radio-btn" id="general-enquiry" value="general-enquiry">
+            <label for="general-enquiry">General enquiry</label>
           </div>
 
-          <div class="form-items ">
-            <div class="message flex">
-              <label for="message">Message <span>*</span></label>
-              <textarea name="message" id="message" rows="3"></textarea>
-            </div>
-
-          <div class="form-items consent flex">
-            <input type="checkbox" name="consent" id="consent">
-            <label for="consent">I consent to being contacted by the team <span>*</span></label>
+          <div class="radio-option input flex">
+            <input type="radio" name="radio-btn" id="support-request" value="support-request">
+            <label for="support-request">Support request</label>
           </div>
+        </div>
+        <span class="error-message" id="radio-error"></span>
+      </div>
+    </div>
 
-        <button type="submit">Submit</button>
+    <div class="form-items">
+      <div class="message flex">
+        <label for="message">Message <span>*</span></label>
+        <textarea name="message" id="message" rows="3"></textarea>
+        <span class="error-message" id="message-error"></span>
+      </div>
+    </div>
 
+    <div class="form-items consent flex">
+      <input type="checkbox" name="consent" id="consent">
+      <label for="consent">I consent to being contacted by the team <span>*</span></label>
+      <span class="error-message" id="consent-error"></span>
+    </div>
+
+    <button type="submit">Submit</button>
   </form>
 </main>
   <!-- Contact Us
