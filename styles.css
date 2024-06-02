@@ -38,12 +38,12 @@ h1 {
 }
 
 form {
-    font-size: 12px;
     font-weight: 400px;
 }
 
 .form-items {
     margin: 1rem 0;
+    font-size: 11px;
 }
 
 .form-items span {
@@ -60,7 +60,7 @@ form {
 .email-address {
     display: block;
 }
-input[type = "checkbox"]:focus, textarea:focus {
+input[type = "text"]:focus, textarea:focus {
     border: 1px solid var(--Green-medium);
     outline: 1px solid var(--Green-medium);
 }
@@ -73,6 +73,10 @@ input[type = "checkbox"]:focus, textarea:focus {
 
 #radio {
     accent-color: var(--Green-medium);
+}
+
+.radio-option label {
+    font-size: 11px;
 }
 
 .radio-option {
@@ -88,7 +92,7 @@ input[type = "checkbox"]:focus, textarea:focus {
 
 .radio-option.active {
     background-color: var(--Green-lighter); 
-  }
+}
 
 /* message */
 .message {
@@ -100,16 +104,19 @@ input[type = "checkbox"]:focus, textarea:focus {
     border: 1px solid var(--Grey-medium);
     border-radius: 5px;
     padding: 10px 10px;
-    margin-bottom: 1rem;
     font-size: 12px;
 }
 
 /* consent */
 .consent {
     gap: 0.5rem;
+
 }
-.consent label {
-    align-items: center;
+.checkbox {
+    align-items: center; 
+    gap: 0.5rem;
+    margin-bottom: 5px;
+
 }
 .consent input [type="checkbox"] :checked:after{
     background: var(--Green-medium);
@@ -137,7 +144,7 @@ button {
     border: 1px solid var(--Grey-medium);
     border-radius: 5px;
     margin-top: 10px;
-    
+    font-size: 12px;
 }
 
 
@@ -145,7 +152,15 @@ button {
     display: flex;
 }
 
-
+/* .error-message {
+    color: var(--Red);
+    font-size: 0.9em;
+    display: none;
+  } */
+  
+  .input.error, textarea.error {
+    border-color: var(--Red);
+  }
 
 
 .attribution { font-size: 11px; text-align: center; }

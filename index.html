@@ -43,12 +43,12 @@
 
         <div class="radio-input flex">
           <div class="radio-option input flex">
-            <input type="radio" name="radio-btn" id="general-enquiry" value="general-enquiry">
+            <input type="radio" name="radio-btn" id="radio" value="general-enquiry">
             <label for="general-enquiry">General enquiry</label>
           </div>
 
           <div class="radio-option input flex">
-            <input type="radio" name="radio-btn" id="support-request" value="support-request">
+            <input type="radio" name="radio-btn" id="radio" value="support-request">
             <label for="support-request">Support request</label>
           </div>
         </div>
@@ -64,9 +64,11 @@
       </div>
     </div>
 
-    <div class="form-items consent flex">
-      <input type="checkbox" name="consent" id="consent">
-      <label for="consent">I consent to being contacted by the team <span>*</span></label>
+    <div class="form-items consent">
+      <div class="checkbox flex">
+        <input type="checkbox" name="consent" id="consent">
+        <label for="consent">I consent to being contacted by the team <span>*</span></label>
+      </div>
       <span class="error-message" id="consent-error"></span>
     </div>
 
