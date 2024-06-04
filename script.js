@@ -10,9 +10,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         firstNameError.textContent = 'This field is required';
         firstName.classList.add('error');
         Object.assign(firstNameError.style, {
-        display: 'block',
-        color: 'hsl(0, 66%, 54%)'
-    });
+            display: 'block',
+            color: 'hsl(0, 66%, 54%)'
+        });
         isValid = false;
     } else {
         firstNameError.textContent = '';
@@ -27,9 +27,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         lastNameError.textContent = 'This field is required';
         lastName.classList.add('error');
         Object.assign(lastNameError.style, {
-        display: 'block',
-        color: 'hsl(0, 66%, 54%)'
-    });
+            display: 'block',
+            color: 'hsl(0, 66%, 54%)'
+        });
         isValid = false;
     } else {
         lastNameError.textContent = '';
@@ -44,11 +44,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     if (!email.value.trim()) {
         emailError.textContent = 'This field is required';
         email.classList.add('error');
-
-    Object.assign(emailError.style, {
-        display: 'block',
-        color: 'hsl(0, 66%, 54%)'
-    });
+        Object.assign(emailError.style, {
+            display: 'block',
+            color: 'hsl(0, 66%, 54%)'
+        });
         isValid = false;
     } else if (!emailPattern.test(email.value.trim())) {
         emailError.textContent = 'Please enter a valid email address';
@@ -65,17 +64,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const queryTypeError = document.getElementById('radio-error');
     const radioButtons = document.querySelectorAll('input[name="radio-btn"]');
     let radioChecked = false;
+    let selectedQueryType = '';
     radioButtons.forEach(radio => {
-    if (radio.checked) {
-        radioChecked = true;
-    }
+        if (radio.checked) {
+            radioChecked = true;
+            selectedQueryType = radio.value;
+        }
     });
     if (!radioChecked) {
         queryTypeError.textContent = 'Please select a query type';
         Object.assign(queryTypeError.style, {
-        display: 'block',
-        color: 'hsl(0, 66%, 54%)'
-    });
+            display: 'block',
+            color: 'hsl(0, 66%, 54%)'
+        });
         isValid = false;
     } else {
         queryTypeError.textContent = '';
@@ -89,8 +90,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         messageError.textContent = 'This field is required';
         message.classList.add('error');
         Object.assign(messageError.style, {
-        display: 'block',
-        color: 'hsl(0, 66%, 54%)'
+            display: 'block',
+            color: 'hsl(0, 66%, 54%)'
         });
         isValid = false;
     } else {
@@ -106,8 +107,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         consentError.textContent = 'To submit this form, please consent to being contacted';
         consent.classList.add('error');
         Object.assign(consentError.style, {
-        display: 'block',
-        color: 'hsl(0, 66%, 54%)'
+            display: 'block',
+            color: 'hsl(0, 66%, 54%)'
         });
         isValid = false;
     } else {
@@ -116,25 +117,48 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         consentError.style.display = 'none';
     }
 
-    // If the form is valid, submit it
+    // If the form is valid, show the toast message
     if (isValid) {
-      // You can replace the alert with an actual form submission
-    alert('Form submitted successfully!');
+        const formData = {
+            firstName: firstName.value.trim(),
+            lastName: lastName.value.trim(),
+            email: email.value.trim(),
+            queryType: selectedQueryType,
+            message: message.value.trim(),
+            consent: consent.checked
+        };
+
+        console.log('Form Data:', formData);
+
+        showMessage();
     }
 });
+
+function showMessage() {
+    let message = document.getElementById("alert");
+    message.classList.add("show");
+    message.style.display = "block"; 
+    
+    setTimeout(function() {
+        message.classList.remove("show");
+        message.style.display = "none"; // Hide it after timeout
+    }, 3000);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const radioOptions = document.querySelectorAll('.radio-option input[type="radio"]');
 
     radioOptions.forEach(radio => {
-    radio.addEventListener('change', function() {
-        // Remove active class from all radio options
-        radioOptions.forEach(r => r.parentElement.classList.remove('active'));
-        
-        // Add active class to the parent of the selected radio button
-        if (radio.checked) {
-            radio.parentElement.classList.add('active');
-        }
+        radio.addEventListener('change', function() {
+            // Remove active class from all radio options
+            radioOptions.forEach(r => r.parentElement.classList.remove('active'));
+            
+            // Add active class to the parent of the selected radio button
+            if (radio.checked) {
+                radio.parentElement.classList.add('active');
+            }
         });
     });
 });
+
+

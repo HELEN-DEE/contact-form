@@ -11,10 +11,15 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="alert">
+    <h3 class="flex header"><img src="assets/images/icon-success-check.svg" alt=""> Message Sent!</h3>
+    <p>Thanks for completing the form, we'll be in touch soon!</p>
+  </div>
 <main>
   <h1>Contact us</h1>
 
 <form id="contact-form" action="#">
+  
     <div class="form-items flex name">
       <div class="firstname">
         <label for="firstname">First name <span>*</span></label>
@@ -59,7 +64,7 @@
     <div class="form-items">
       <div class="message flex">
         <label for="message">Message <span>*</span></label>
-        <textarea name="message" id="message" rows="3"></textarea>
+        <textarea name="message" id="message" rows="4"></textarea>
         <span class="error-message" id="message-error"></span>
       </div>
     </div>
@@ -72,36 +77,11 @@
       <span class="error-message" id="consent-error"></span>
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit" type="submit">Submit</button>
   </form>
 </main>
-  <!-- Contact Us
 
-  First Name
-  This field is required
 
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
