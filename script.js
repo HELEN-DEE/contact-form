@@ -148,12 +148,14 @@ function showMessage() {
 document.addEventListener('DOMContentLoaded', function() {
     const radioOptions = document.querySelectorAll('.radio-option input[type="radio"]');
 
+
+
     radioOptions.forEach(radio => {
         radio.addEventListener('change', function() {
-            // Remove active class from all radio options
+
             radioOptions.forEach(r => r.parentElement.classList.remove('active'));
             
-            // Add active class to the parent of the selected radio button
+
             if (radio.checked) {
                 radio.parentElement.classList.add('active');
             }
@@ -161,15 +163,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+    // const radioLabel = document.getElementById('radio-label');
+    // const radio = document.getElementById('radio');
 
-function myFunction() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-  
-    // Add the "show" class to DIV
-    x.className = "show";
-  
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
+    // radioLabel.addEventListener ( click, () => {
+    //     radio.click();
+    // })
 

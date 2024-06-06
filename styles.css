@@ -20,8 +20,9 @@
 body {
     background-color: var(--Green-lighter);
     font-family: "Karla", sans-serif;
-    margin: 2% 0;
+    margin: 5rem 0;
     overflow-y: hidden;
+    height: 100%;
 }
 
 main {
@@ -44,7 +45,7 @@ form {
 }
 
 .form-items {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     font-size: 15px;
 }
 
@@ -135,17 +136,17 @@ button {
     border: 0;
     border-radius: 6px;
     color: var(--White);
-    margin: 0 0 1rem 0;
+    margin-bottom: 1rem ;
 }
 
 
 /* general styling */
 .input {
     width: 100%;
-    padding: 10px 10px;
+    padding: 8px 10px;
     border: 1px solid var(--Grey-medium);
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 15px;
 }
 
@@ -163,18 +164,17 @@ button {
 #alert {
     display: none;
     text-align: center;
-    position: fixed;
-    top: 8%;
-    right: -100%; 
-    transform: translateY(-50%);
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    right: -100%;
     background-color: var(--Grey-darker);
     color: var(--White);
     font-size: 15px;
     width: 32%;
     margin: 0 auto;
-    padding: 15px 5px;
+    padding: 10px 5px;
     border-radius: 10px;
-    z-index: 1000; 
+    z-index: 1000;
     transition: right 0.5s ease-in-out;
 
 }
@@ -183,10 +183,11 @@ button {
 }
 
 .header {
-    justify-content: center;
+    justify-content: start;
     gap: 0.5rem;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 10px;
+    padding: 0 0 0 1rem ;
 }
 
 .header img {
@@ -195,7 +196,7 @@ button {
 
 #alert.show {
     display: block;
-    right: 50%; 
+    right: 50%;
     transform: translateX(50%) translateY(-50%);
 }
 
@@ -246,5 +247,7 @@ main {
 textarea {
     height: 10rem;
 }
-
+#alert {
+    width: 45%;
+}
 }
