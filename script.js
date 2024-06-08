@@ -146,27 +146,27 @@ function showMessage() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const radioOptions = document.querySelectorAll('.radio-option input[type="radio"]');
+    const radioOptions = document.querySelectorAll('.radio-option');
 
+    radioOptions.forEach(option => {
+        const radio = option.querySelector('input[type="radio"]');
+        const radioLabel = option.querySelector('label');
 
-
-    radioOptions.forEach(radio => {
         radio.addEventListener('change', function() {
-
-            radioOptions.forEach(r => r.parentElement.classList.remove('active'));
-            
+            radioOptions.forEach(r => r.classList.remove('active'));
 
             if (radio.checked) {
-                radio.parentElement.classList.add('active');
+                option.classList.add('active');
             }
+        });
+
+        radioLabel.addEventListener('click', function() {
+            radio.click();
         });
     });
 });
 
-    // const radioLabel = document.getElementById('radio-label');
-    // const radio = document.getElementById('radio');
 
-    // radioLabel.addEventListener ( click, () => {
-    //     radio.click();
-    // })
+
+
 

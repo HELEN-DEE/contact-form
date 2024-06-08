@@ -232,6 +232,7 @@ button {
 @media screen and (max-width: 675px) {
 body {
     overflow-y: scroll;
+    margin: 1rem 0;
 }
 
 main {
@@ -248,6 +249,6 @@ textarea {
     height: 10rem;
 }
 #alert {
-    width: 45%;
+    width: 90%;
 }
 }
