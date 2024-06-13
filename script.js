@@ -141,7 +141,8 @@ function showMessage() {
 
     setTimeout(function() {
         message.classList.remove("show");
-        message.style.display = "none"; // Hide it after timeout
+        message.style.display = "none"; 
+        location.reload();
     }, 3000);
 }
 
